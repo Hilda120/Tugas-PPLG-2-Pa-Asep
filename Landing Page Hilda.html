@@ -1,0 +1,293 @@
+<DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erine JKT48 - Official Fan Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0c20 0%, #1a102f 50%, #2a0826 100%);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Header Navbar */
+    nav {
+      width: 100%;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ff4d8d;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero-container {
+      max-width: 1100px;
+      width: 90%;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(255, 77, 141, 0.25);
+      border: 3px solid rgba(255, 77, 141, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.02);
+    }
+
+    .hero-content {
+      flex: 1.2;
+      min-width: 300px;
+    }
+
+    .tag {
+      background: rgba(255, 77, 141, 0.2);
+      color: #ff4d8d;
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 15px;
+      border: 1px solid rgba(255, 77, 141, 0.4);
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      background: linear-gradient(45deg, #ffffff, #ffb3d1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content h3 {
+      font-size: 1.2rem;
+      color: #a0a0c0;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .bio-text {
+      color: #d0d0e0;
+      line-height: 1.7;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .stat-card .value {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #ff80ab;
+    }
+
+    .stat-card .label {
+      font-size: 0.75rem;
+      color: #9090b0;
+      margin-top: 4px;
+    }
+
+    /* Spotify Music Player Container */
+    .spotify-container {
+      margin-bottom: 25px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Action Buttons */
+    .cta-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(45deg, #ff4d8d, #ff80ab);
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(255, 77, 141, 0.3);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 12px 25px rgba(255, 77, 141, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 25px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #707090;
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">ERINE <span>JKT48</span></div>
+    <a href="https://jkt48.com" target="_blank" class="btn btn-secondary" style="padding: 8px 18px; font-size: 0.8rem;">Official JKT48</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-container">
+    
+    <!-- Profile Photo -->
+    <div class="hero-image">
+      <img src="https://image.idntimes.com/post/20240229/whatsapp-image-2024-02-28-at-55352-pm-770cbc2889bb4c14bf5042be7b505d5d-e9aa4815da8651d22a8dc10b68a4b2d5.jpeg" alt="Catherina Vallencia - Erine JKT48">
+    </div>
+
+    <!-- Profile Details -->
+    <div class="hero-content">
+      <span class="tag">JKT48 12th Generation</span>
+      <h1>Catherina Vallencia</h1>
+      <h3>Dikenal sebagai: Erine JKT48</h3>
+
+      <p class="bio-text">
+        Catherina Vallencia (Erine) adalah member JKT48 generasi ke-12. Dikenal dengan senyum manis dan penampilan panggungnya yang enerjik, Erine terus berkembang memberikan keceriaan bagi para fans JKT48!
+      </p>
+
+      <!-- Key Info Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="value">Gen 12</div>
+          <div class="label">Generasi</div>
+        </div>
+        <div class="stat-card">
+          <div class="value">21 Agustus</div>
+          <div class="label">Ulang Tahun</div>
+        </div>
+        <div class="stat-card">
+          <div class="value">B</div>
+          <div class="label">Gol. Darah</div>
+        </div>
+      </div>
+
+      <!-- Spotify Music Player Component (LANY - you!) -->
+      <div class="spotify-container">
+        <iframe 
+          style="border-radius:12px;" 
+          src="https://www.tiktok.com/@jkt48.erine_?_r=1&_t=ZS-9A9nHWPXgs3"
+          width="100%" 
+          height="152" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Call to Action / Social Links -->
+      <div class="cta-buttons">
+        <a href="https://www.instagram.com/jkt48.erine/" target="_blank" class="btn btn-primary">Follow Instagram</a>
+        <a href= "https://www.tiktok.com/@jkt48.erine_?_r=1&_t=ZS-9A9nHWPXgs3" target="_blank" class="btn btn-secondary">TikTok Official</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Fanmade Landing Page for Catherina Vallencia (Erine JKT48).</p>
+  </footer>
+
+</body>
+</html>
